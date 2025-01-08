@@ -78,22 +78,23 @@ input{
     user-select: none;
 
 }
-
-.todos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 5px 10px 5px 10px;
-    flex-wrap: wrap;
-}
-.todos-items{
+.todos-items {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-flow: wrap;
+    overflow: hidden; 
+    word-wrap: break-word; 
+    width: 100%;
 }
-ul li{
-
+.todos-items{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-flow: wrap;
+}
+.todos li{
+    max-width: 80%;
     list-style: none;
     font-size: 17px;
     padding: 12px 0 12px 0;
@@ -112,8 +113,8 @@ ul li{
     border-radius: 50%;
     user-select: none;
 }
-.todos button:hover{
-    outline: 2px solid gray;
+.todos button:hover {
+    outline: 2px solid #999; 
 }
 .todos button:focus{
     outline: 2px solid #142cde;
